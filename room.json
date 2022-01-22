@@ -1,0 +1,147 @@
+[
+    {
+        "name":"OYO Flagship 36704 Hotel Madison",
+        "image_urls": [
+            "https://images.oyoroomscdn.com/uploads/hotel_image/55219/large/b6b693908e5e281a.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/55219/large/909437c08c325219.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/55219/large/f3f7efd38a2bcb90.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/55219/large/b3e4b96a2e8c9a97.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/55219/large/b3e4b96a2e8c9a97.jpg"
+        ],
+        "rent_perday":1500,
+        "type":"Delux",
+        "maxcount":4,
+        "phonenumber":9853801920,
+        "currentbooking": [
+
+        ],
+        "description": "Hotel Madison is located in an area called Patia near Khimji Honda in Bhubaneshwar.You can sample varied flavours at nearby places like Cafe Frespresso, Recess, Biryani Box, Paradise Kitchen Hyderabadi Biryani and Bocca Cafe."
+
+    },
+    {
+        "name":"OYO 49258 Ms Non-Deluxe",
+        "image_urls": [
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c4c14ce167dcfb37.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c4c14ce167dcfb37.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/dfa54254ba0bc30c.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/dfa54254ba0bc30c.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c67aa7fe326031bd.jpg"
+        ],
+        "rent_perday":2500,
+        "type":"Non-Delux",
+        "maxcount":5,
+        "phonenumber":9090182456,
+        "currentbooking": [
+
+        ],
+        "description": "Ms Deluxe is a well-kept property with bright and cosy rooms, near Kaustav College, in Bhubaneswar. It is also close to Shikharchandi Hill Forest, Kelucharan Park, Kalinga Institute of Industrial Technology, Infocity, Nandankanan Zoological Park, and Pathani Samanta Planetarium."
+    },
+    {
+        "name":"OYO 81627 Luxury Stay near Cosmopolis",
+        "image_urls": [
+            "https://images.oyoroomscdn.com/uploads/hotel_image/113590/large/8c952051906424a8.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/113590/large/8c410e79c256ee32.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/113590/large/b1151b152033ca98.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/113590/large/12b403956bdb00e3.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/113590/large/d87cb040a7e18403.jpg"
+        ],
+        "rent_perday":4500,
+        "type":"Delux",
+        "maxcount":5,
+        "phonenumber":8656182456,
+        "currentbooking": [
+
+        ],
+        "description": "OYO 81627 Luxury Stay near Cosmopolis is a well-kept property with bright and cosy rooms, near Kaustav College, in Bhubaneswar. It is also close to Shikharchandi Hill Forest, Kelucharan Park, Kalinga Institute of Industrial Technology, Infocity, Nandankanan Zoological Park, and Pathani Samanta Planetarium."
+    },
+    {
+        "name":"OYO Flagship 24789 Sidharth Residency",
+        "image_urls": [
+            "https://images.oyoroomscdn.com/uploads/hotel_image/46994/large/56e5d971fe01e51f.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/46994/large/3c7dd03fc92b79e2.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/46994/large/3cfc4a7068caebee.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/46994/large/cbf8f4eeea3fbeaf.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/46994/large/9cd188b53aa40f8d.jpg"
+        ],
+        "rent_perday":2000,
+        "type":"Non-Delux",
+        "maxcount":3,
+        "phonenumber":8950182456,
+        "currentbooking": [
+
+        ],
+        "description": "Siddharth residency is a homely property located in the Patrapada area in Bhubneshwar. You can also visit Biju Patnaik Park, Parsurameshwara Temple, Museum of Tribal Arts and artefacts and Regional Museum of Natural History."
+    },
+    {
+        "name":"OYO 80631 Collection O Lal Qila",
+        "image_urls": [
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c4c14ce167dcfb37.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c4c14ce167dcfb37.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/dfa54254ba0bc30c.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/dfa54254ba0bc30c.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c67aa7fe326031bd.jpg"
+        ],
+        "rent_perday":1500,
+        "type":"Delux",
+        "maxcount":2,
+        "phonenumber":9999182456,
+        "currentbooking": [
+
+        ],
+        "description": "OYO 80631 Collection O Lal Qila is an exclusive hotel that offers every amenity for a perfect stay. With in-house restaurant and parking facility, guests can enjoy their meals and explore the city without any worries. Located in Bhubaneswar, the hotel is also close to popular attractions like Nandankanan Zoological Park and Mayfair Lagoon."
+    },
+    {
+        "name":"OYO Collection O 50273 Old Town",
+        "image_urls": [
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c4c14ce167dcfb37.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c4c14ce167dcfb37.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/dfa54254ba0bc30c.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/dfa54254ba0bc30c.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c67aa7fe326031bd.jpg"
+        ],
+        "rent_perday":2500,
+        "type":"Non-Delux",
+        "maxcount":2,
+        "phonenumber":8867182456,
+        "currentbooking": [
+
+        ],
+        "description": "Collection O 50273 Old Town is in Pandav Nagar, Bhubaneswar. The environment inside the hotel is welcoming. The rooms are spacious with the interiors are minimal."
+    },
+    {
+        "name":"OYO Capital O 48989 MR House",
+        "image_urls": [
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c4c14ce167dcfb37.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c4c14ce167dcfb37.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/dfa54254ba0bc30c.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/dfa54254ba0bc30c.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c67aa7fe326031bd.jpg"
+        ],
+        "rent_perday":1000,
+        "type":"Delux",
+        "maxcount":2,
+        "phonenumber":9090182456,
+        "currentbooking": [
+
+        ],
+        "description": "Sitting near Shishu Vihar in Bhubaneshwar, MR House looks wonderful and offers accommodation at affordable prices. Patia P.H. Railway Station is about a mile or so from the hotel. Places of interest located in close proximity are Nandankanan Zoological Park, Ekamra Kanan Botanical Gardens, Shikhar Chandi Temple, Maa Tarini Temple, Jagannath Temple, Tarini Temple and Shirdi Sai Baba Temple."
+    },
+    {
+        "name":"OYO 80162 Collection O Hotel Paradise",
+        "image_urls": [
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c4c14ce167dcfb37.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c4c14ce167dcfb37.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/dfa54254ba0bc30c.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/dfa54254ba0bc30c.jpg",
+            "https://images.oyoroomscdn.com/uploads/hotel_image/79302/large/c67aa7fe326031bd.jpg"
+        ],
+        "rent_perday":2500,
+        "type":"Non-Delux",
+        "maxcount":5,
+        "phonenumber":9090182456,
+        "currentbooking": [
+
+        ],
+        "description": "Ms Deluxe is a well-kept property with bright and cosy rooms, near Kaustav College, in Bhubaneswar. It is also close to Shikharchandi Hill Forest, Kelucharan Park, Kalinga Institute of Industrial Technology, Infocity, Nandankanan Zoological Park, and Pathani Samanta Planetarium."
+    }
+]

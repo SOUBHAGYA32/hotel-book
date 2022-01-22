@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Montserrat:wght@400;500&family=Open+Sans&family=Oswald&family=Pacifico&family=Poppins&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500  ;
+}
+.navbar-brand{
+  font-weight: bold;
+}
+.navbar-nav{
+  margin-left: auto !important;
+}
+.nav-link {
+  color: white !important;
+}
+.smallimg {
+  height: 200px;
+  width: 100% !important;
+  border-radius: 5px !important;
+}
+h1 {
+  font-size: 25px !important;
+  font-weight: bold !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.btn {
+  background-color: black !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+.box-s {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 20px !important;
+  padding: 20px !important;
+}
+.bigimg {
+  height: 400px !important;
+  border-radius: 5px !important;
+}

@@ -1,8 +1,10 @@
 import express from 'express';
 import mongoose from "mongoose";
+import bodyParser from 'body-parser';
 import { APP_PORT, MONGO_URL } from './config';
 import roomModel from './Model/room';
 import roomRouter from './routes/roomRoute';
+import userRouter from './routes/userRoute'
 
 
 
@@ -24,6 +26,7 @@ connection.on('connected', ()=>{
 
 
 app.use('/api/rooms', roomRouter)
+app.use('/api/users', userRouter)
 
 app.listen(APP_PORT, ()=>{
     console.log(`Listening on PORT ${APP_PORT}.`)

@@ -4,7 +4,8 @@ import './App.css';
 //Screen 
 import Homescreen from './Screens/Homescreen';
 import Bookingscreen from './Screens/Bookingscreen';
-
+import Loginscreen from './Screens/Loginscreen';
+import Registerscreen from './Screens/Registerscreen';
 //Components
 import Navbar from './Components/Navbar';
 
@@ -15,6 +16,8 @@ function App() {
      <Router>
       <Route path="/" exact component={Homescreen} />
        <Route path="/book/:roomid" exact component={Bookingscreen}/>
+       <Route path="/login" exact component={Loginscreen}/>
+       <Route path="/register" exact component={Registerscreen}/>
      </Router>
   </div>
   );

@@ -1,12 +1,10 @@
 import React from 'react';
 
-function Success() {
+function Success({success}) {
   return (
-      <div>
-        <div class="alert alert-success" role="alert">
-            A simple success alert—check it out!
-        </div>
-      </div>
+    <div className='success_msg'>
+    {success}
+    </div>
   );
 }
 

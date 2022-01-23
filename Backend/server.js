@@ -28,8 +28,17 @@ connection.on('connected', ()=>{
 app.use('/api/rooms', roomRouter)
 app.use('/api/users', userRouter)
 
-app.listen(APP_PORT, ()=>{
+const server = app.listen(APP_PORT, ()=>{
     console.log(`Listening on PORT ${APP_PORT}.`)
 });
+
+//Handled promise rejection
+process.on('unhandledRejection', err =>{
+    console.log(`ERROR : ${err.message}`);
+    console.log(`Shutting Down The Server due to Unhandled Promise exception`);
+    server.close(()=>{
+        process.exit(1);
+    })
+})
 
 

@@ -1,39 +1,60 @@
-import React, { useState, useEffect } from 'react';
-import { Link} from "react-router-dom";
+import Error from '../Components/Error';
+import Success from '../Components/Success';
+import Loading from '../Components/Loading';
+
+import React, { useState} from 'react';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
 const Registerscreen = () => {
 
+
     const [name, setname] = useState("");
-  const [email, setemail] = useState("");
-  const [password, setpassword] = useState("");
-  const [cpassword, setcpassword] = useState("");
-  const[error, seterror]=useState("");
-  const[success, setsuccess] = useState("");
+    const [email, setemail] = useState("");
+    const [password, setpassword] = useState("");
+    const [cpassword, setcpassword] = useState("");
+    const[loading, setloading]=useState(false)
+    const[error, seterror]=useState("")
+    const[success, setsuccess]=useState("") 
 
-  async function register(){
-     if(password == cpassword)
-     {
-        const user = {
-            name,
-            email,
-            password,
-            cpassword
-        }
-        try {
+    async function registerUser() {
+        if(password!=cpassword)
+      {
+          alert("passwords not matched")
+      }
+   
+      else{
+        const user={
+              name,
+              email,
+              password
+          }
+          try {
+            setloading(true)
             const result = await (await axios.post('/api/users/register',user)).data
-            setsuccess(result.data.message);
-        } catch (error) {
-            seterror(error.response.data.message);     
-        }
-     }
-     else {
+            setloading(false)
+            setsuccess(result.response.message)
+            setemail('')
+            setname('')
+            setcpassword('')
+            setpassword('')
+          } catch (error) {
+            if (
+				error.response &&
+				error.response.status >= 400 &&
+				error.response.status <= 500
+			) {
+				seterror(error.message);
+			}
+            console.log(error);
+          }
+      
+      }
 
-     }
-  }
+    }
 
     return (
-        
+
         <div className='login_container'>
             <div className='login_form_container'>
             <div className='right'>
@@ -45,32 +66,30 @@ const Registerscreen = () => {
 					</Link>
                 </div>
                 <div className="left">
-                    <form action="" className='form_container'>
-                    <h1>Create Account</h1>
+                   <div className='form_container'>
+                   <h1>Create Account</h1>
 						<input
 							type="text"
 							placeholder="Name"
 							name="name"
-                            value={name} 
-                            onChange={(e)=>{setname(e.target.value)}}
 							required
+                            value={name} onChange={(e)=>{setname(e.target.value)}}
 							className='input'
 						/>
 						<input
 							type="email"
 							placeholder="Email"
 							name="email"
-                            value={email} 
-                            onChange={(e)=>{setemail(e.target.value)}}
 							required
+                            value={email} onChange={(e)=>{setemail(e.target.value)}}
 							className='input'
 						/>
 						<input
 							type="password"
 							placeholder="Password"
 							name="password"
-							required
                             value={password}
+                            required
                             onChange={(e)=>{setpassword(e.target.value)}}
 							className='input'
 						/>
@@ -83,12 +102,12 @@ const Registerscreen = () => {
                             onChange={(e)=>{setcpassword(e.target.value)}}
 							className='input'
 						/>
-                        
-                        {error && <div className='error_msg'>{error}</div> }   
-                        <button className='green_btn' onClick={register}>
-							Sing In
+                        {success && (<Success success='User Registered Successfully'/>)}
+                        {error && (<Error error={error} />)}
+                        <button className='green_btn' onClick={registerUser}>
+							Register
 						</button>
-                    </form>
+                   </div>
                 </div>
                 
             </div>

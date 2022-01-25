@@ -1,26 +1,25 @@
 import Error from '../Components/Error';
 import Success from '../Components/Success';
-import Loading from '../Components/Loading';
-
 import React, { useState} from 'react';
 import { Link } from "react-router-dom";
+
+
 import axios from 'axios';
 
 const Registerscreen = () => {
-
-
+    
     const [name, setname] = useState("");
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
     const [cpassword, setcpassword] = useState("");
-    const[loading, setloading]=useState(false)
     const[error, seterror]=useState("")
     const[success, setsuccess]=useState("") 
+
 
     async function registerUser() {
         if(password!=cpassword)
       {
-          alert("passwords not matched")
+          alert("Passwords not matched")
       }
    
       else{
@@ -30,10 +29,8 @@ const Registerscreen = () => {
               password
           }
           try {
-            setloading(true)
             const result = await (await axios.post('/api/users/register',user)).data
-            setloading(false)
-            setsuccess(result.response.message)
+            setsuccess(result.message)
             setemail('')
             setname('')
             setcpassword('')
@@ -54,7 +51,6 @@ const Registerscreen = () => {
     }
 
     return (
-
         <div className='login_container'>
             <div className='login_form_container'>
             <div className='right'>
@@ -98,19 +94,18 @@ const Registerscreen = () => {
 							placeholder="Confirm Password"
 							name="confirmpassword"
                             value={cpassword}
-                            required
                             onChange={(e)=>{setcpassword(e.target.value)}}
 							className='input'
 						/>
-                        {success && (<Success success='User Registered Successfully'/>)}
-                        {error && (<Error error={error} />)}
+                        {success && (<Success success={success}/>)}
+                        {error && (<Error error='Invalid inputs!' />)}
                         <button className='green_btn' onClick={registerUser}>
 							Register
 						</button>
                    </div>
                 </div>
                 
-            </div>
+            </div> 
         </div>
     );
 }

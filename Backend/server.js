@@ -1,8 +1,8 @@
 import express from 'express';
-import mongoose from "mongoose";
-import bodyParser from 'body-parser';
-import { APP_PORT, MONGO_URL } from './config';
-import roomModel from './Model/room';
+const bodyParser = require('body-parser')
+require('dotenv').config();
+require('./db');
+
 import roomRouter from './routes/roomRoute';
 import userRouter from './routes/userRoute'
 
@@ -10,35 +10,14 @@ import userRouter from './routes/userRoute'
 
 
 const app = express();
-app.use(express.json());
-
-
-mongoose.connect(MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true});
-var connection = mongoose.connection;
-
-connection.on('error', ()=>{
-    console.log("Connection Failed!..");
-})
-connection.on('connected', ()=>{
-    console.log("Connection Successful..");
-})
-
+app.use(bodyParser.json());
 
 
 app.use('/api/rooms', roomRouter)
 app.use('/api/users', userRouter)
 
-const server = app.listen(APP_PORT, ()=>{
-    console.log(`Listening on PORT ${APP_PORT}.`)
-});
-
-//Handled promise rejection
-process.on('unhandledRejection', err =>{
-    console.log(`ERROR : ${err.message}`);
-    console.log(`Shutting Down The Server due to Unhandled Promise exception`);
-    server.close(()=>{
-        process.exit(1);
-    })
+const PORT = process.env.PORT || 5000
+app.listen(PORT, ()=>{
+    console.log(`App is Running on PORT 5000`)
 })
-
 

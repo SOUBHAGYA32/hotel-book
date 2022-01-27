@@ -70,14 +70,19 @@ module.exports.login = async(req, res) => {
 	}
     const { email, password } = req.body;
     try {
-        const user = await User.findOne({ email });
+        const user = await User.findOne({ email});
         if(user){
             const matched = await bcrypt.compare(password, user.password);
             if (matched) {
-				const token = createToken(user);
+                const currentUser = {
+                    name : user.name , 
+                    email : user.email, 
+                    isAdmin : user.isAdmin, 
+                    _id : user._id
+                }
 				return res
-					.status(200)
-					.json({ msg: 'You have login successfully', token });
+                       .status(200)
+                       .send(currentUser);
 			} else {
 				return res
 					.status(401)

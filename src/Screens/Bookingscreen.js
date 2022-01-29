@@ -23,7 +23,7 @@ function Bookingscreen({ match }) {
   //API Request
   useEffect(async () => {
     if(!localStorage.getItem('currentUser')){
-      window.location.reload = '/login'
+      window.location.href = '/login'
     }
     try {
       setloading(true);

@@ -15,7 +15,7 @@ function App() {
       <Navbar/>
      <Router>
       <Route path="/" exact component={Homescreen} />
-       <Route path="/book/:roomid" exact component={Bookingscreen}/>
+       <Route path="/book/:roomid/:fromdate/:todate" exact component={Bookingscreen}/>
        <Route path="/login" exact component={Loginscreen}/>
        <Route path="/register" exact component={Registerscreen}/>
      </Router>

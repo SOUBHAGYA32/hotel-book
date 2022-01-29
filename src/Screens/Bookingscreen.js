@@ -18,9 +18,13 @@ function Bookingscreen({ match }) {
   const todate = moment(match.params.todate, "DD-MM-YYYY");
   const totalDays = moment.duration(todate.diff(fromdate)).asDays() + 1;
 
+ 
 
   //API Request
   useEffect(async () => {
+    if(!localStorage.getItem('currentUser')){
+      window.location.reload = '/login'
+    }
     try {
       setloading(true);
       const data = (

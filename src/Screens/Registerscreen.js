@@ -52,7 +52,8 @@ const Registerscreen = () => {
      }
   }
     return (
-        <div className='login_container'>
+        <>
+        <div className='login_container container'>
             <ToastContainer
                 theme="dark"
                 style={{ width: "600px", height: "100px"}}
@@ -67,7 +68,7 @@ const Registerscreen = () => {
                 pauseOnHover
             />
             <div className='login_form_container'>
-            <div className='right'>
+            <div className='container right'>
                     <h1>Welcome Back</h1>
                     <Link to="/login">
 						<button type="button" className='white_btn'>
@@ -121,6 +122,7 @@ const Registerscreen = () => {
                 
             </div> 
         </div>
+        </>
     );
 }
 

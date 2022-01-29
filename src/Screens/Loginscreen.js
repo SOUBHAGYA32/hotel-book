@@ -41,7 +41,7 @@ function Loginscreen() {
 
       }
     return (
-        <div className='login_container'>
+        <div className='container login_container'>
          <ToastContainer
                 theme="dark"
                 style={{ width: "600px", height: "100px"}}

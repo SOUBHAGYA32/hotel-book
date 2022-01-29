@@ -79,3 +79,38 @@ module.exports.bookroom = async (req, res) => {
     console.log(error);
   }
 };
+
+module.exports.getbookbyid = async (req, res) => {
+  const { userid } = req.body;
+  try {
+    const bookings = await Booking.find({ userid: userid }).sort({ _id: -1 });
+    res.send(bookings);
+  } catch (error) {
+    return res.status(400).json({ message: "Something went wrong" });
+  }
+};
+
+
+module.exports.cancelbooking = async (req, res) => {
+  const { bookingid, roomid } = req.body;
+  
+
+  try {
+
+    const bookingitem = await Booking.findOne({_id: bookingid}) 
+    bookingitem.status='cancelled'
+    await bookingitem.save();
+
+    const room = await Room.findOne({_id:roomid})
+    const bookings = room.currentbooking
+    const temp = bookings.filter(booking => booking.bookingid.toString()!== bookingid)
+    console.log(temp);
+    room.currentbooking=temp;
+    await room.save();
+
+    res.send('Booking deleted successfully')
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json({ message: "something went wrong" });
+  }
+}

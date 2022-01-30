@@ -1,9 +1,8 @@
 import Booking from "../Components/Booking";
-import React, {useEffect, useState} from "react";
-import { Tabs, Card, Avatar, Button } from "antd";
+import React, {useEffect} from "react";
+import { Tabs, Card } from "antd";
 
 const { TabPane } = Tabs;
-const { Meta } = Card;
 function Profilescreen() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -50,7 +49,6 @@ function Profilescreen() {
             </p>
             <button className="btn">Buy Membership</button>
           </Card>
-          ,
         </TabPane>
       </Tabs>
     </div>

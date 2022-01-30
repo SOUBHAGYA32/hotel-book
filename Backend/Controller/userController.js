@@ -98,3 +98,13 @@ module.exports.login = async(req, res) => {
   
   
 }
+
+
+module.exports.getallusers = async(req,res) => {
+    try {
+        const users = await User.find({})
+        res.send(users)
+    } catch (error) {
+        return res.status(400).json({ message: error });
+    }
+}

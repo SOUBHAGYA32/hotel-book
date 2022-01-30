@@ -4,11 +4,13 @@ const {
     register, 
     registerValidations,
     login,
-    loginValiations
+    loginValiations,
+    getallusers
 } = require('../Controller/userController');
 const User = require('../Model/user');
 
 userRouter.post("/register",registerValidations,register);
 userRouter.post("/login",loginValiations,login );
+userRouter.get('/getallusers',getallusers);
 
 export default userRouter

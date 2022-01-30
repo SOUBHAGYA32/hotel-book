@@ -8,6 +8,9 @@ import Loginscreen from './Screens/Loginscreen';
 import Registerscreen from './Screens/Registerscreen';
 import Profilescreen from './Screens/Profilescreen';
 
+//Admin
+import Dashboard from './Admin/Dashboard';
+
 //Components
 import Navbar from './Components/Navbar';
 
@@ -21,6 +24,7 @@ function App() {
        <Route path="/login" exact component={Loginscreen}/>
        <Route path="/register" exact component={Registerscreen}/>
        <Route path="/profile" exact component={Profilescreen}/>
+       <Route path="/admin" exact component={Dashboard}/>
      </Router>
   </div>
   );

@@ -114,3 +114,12 @@ module.exports.cancelbooking = async (req, res) => {
     return res.status(400).json({ message: "something went wrong" });
   }
 }
+
+module.exports.getallbooking = async (req,res)=>{
+  try {
+      const bookings = await Booking.find({});
+      res.send(bookings);
+    } catch (error) {
+      return res.status(400).json({ message: error });
+    }
+}

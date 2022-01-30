@@ -4,7 +4,7 @@ import Users from "./Users";
 import Rooms from "./Rooms";
 import Addroom from "./Addroom";
 
-import React from "react";
+import React, {useEffect} from "react";
 import { Tabs } from "antd";
 
 
@@ -12,6 +12,18 @@ import {GrUserAdmin} from 'react-icons/gr'
 const { TabPane } = Tabs;
 
 function Dashboard() {
+
+  
+  useEffect(() => {
+
+    const admin = JSON.parse(localStorage.getItem("currentUser"))
+    if(!admin.isAdmin)
+    {
+        window.location.href='/'
+    }
+  }, [])
+
+
   return (
     <div className="ml-3 mt-5 m-5">
     <div className="text-center m-2" style={{ fontSize: "35px" }}>

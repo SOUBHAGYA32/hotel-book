@@ -4,7 +4,13 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import StripeCheckout from "react-stripe-checkout";
 import Swal from 'sweetalert2'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+    duration:'2000'
+});
 const axios = require("axios");
+
 
 function Bookingscreen({ match }) {
   const [loading, setloading] = useState(true);
@@ -78,7 +84,7 @@ function Bookingscreen({ match }) {
   }
 
   return (
-    <div className="m-5">
+    <div className="m-5" data-aos="zoom-in">
       {loading ? (
         <Loading />
       ) : rooms ? (

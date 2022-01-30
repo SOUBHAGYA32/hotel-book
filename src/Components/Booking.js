@@ -1,9 +1,10 @@
 import Loading from "./Loading";
-import Error from "./Error";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Card, Col, Row, Avatar, Tag, Button } from "antd";
+import { Card, Col, Row, Tag } from "antd";
 import Swal from "sweetalert2";
+
+
 
 function Booking() {
   const [mybookings, setmybookings] = useState([]);

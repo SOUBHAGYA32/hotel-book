@@ -6,6 +6,9 @@ function Navbar() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
   function logout() {
     localStorage.removeItem('currentUser');
+    localStorage.removeItem('rooms');
+    localStorage.removeItem('users');
+    localStorage.removeItem('bookings');
     window.location.href='/login'
   }
   return (
@@ -45,6 +48,12 @@ function Navbar() {
                       Profile
                     </a>
                   </li>
+                  
+                  {user.isAdmin &&  <li>
+                    <a class="dropdown-item" href="/admin">
+                     Admin Panel
+                    </a>
+                  </li>}
                   <li>
                     <a class="dropdown-item" href="#" onClick={logout}>
                      Logout

@@ -7,24 +7,29 @@ import Bookingscreen from './Screens/Bookingscreen';
 import Loginscreen from './Screens/Loginscreen';
 import Registerscreen from './Screens/Registerscreen';
 import Profilescreen from './Screens/Profilescreen';
+import Landingscreen from './Screens/Landingscreen';
 
 //Admin
 import Dashboard from './Admin/Dashboard';
 
 //Components
 import Navbar from './Components/Navbar';
-
+import Notfound from './Components/Notfound';
 function App() {
   return (
     <div className="App">
       <Navbar/>
      <Router>
-      <Route path="/" exact component={Homescreen} />
+      <Route path="/home" exact component={Homescreen} />
        <Route path="/book/:roomid/:fromdate/:todate" exact component={Bookingscreen}/>
        <Route path="/login" exact component={Loginscreen}/>
        <Route path="/register" exact component={Registerscreen}/>
        <Route path="/profile" exact component={Profilescreen}/>
        <Route path="/admin" exact component={Dashboard}/>
+       <Route path="/" exact component={Landingscreen}/>
+       <Route>
+         <Notfound/>
+       </Route>
      </Router>
   </div>
   );

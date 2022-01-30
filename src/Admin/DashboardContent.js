@@ -56,14 +56,6 @@ function DashboardContent() {
             </div>
         </div>
     </div>
-    <div className="row mb-2">
-        <div className="col">
-            
-        </div>
-        <div className="col">
-           
-        </div>
-    </div>
     </div>
   );
 }

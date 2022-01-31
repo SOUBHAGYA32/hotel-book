@@ -14,7 +14,7 @@ import Dashboard from './Admin/Dashboard';
 
 //Components
 import Navbar from './Components/Navbar';
-import Notfound from './Components/Notfound';
+
 function App() {
   return (
     <div className="App">
@@ -27,9 +27,6 @@ function App() {
        <Route path="/profile" exact component={Profilescreen}/>
        <Route path="/admin" exact component={Dashboard}/>
        <Route path="/" exact component={Landingscreen}/>
-       <Route>
-         <Notfound/>
-       </Route>
      </Router>
   </div>
   );
